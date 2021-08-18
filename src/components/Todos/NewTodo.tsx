@@ -1,27 +1,28 @@
 import { useContext, useRef } from 'react';
-import TodosContext from '../store/todos-context';
-import classes from './NewTodo.module.css';
+import TodosContext from '../../store/todos-context';
+import Form from '../UI/Form';
 
 const NewTodo: React.FC = () => {
   const { addTodo } = useContext(TodosContext);
   const todoInputRef = useRef<HTMLInputElement>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
     const enteredTodo = todoInputRef.current!.value;
     if (!enteredTodo.trim().length) return;
 
+    todoInputRef.current!.value = '';
     addTodo(enteredTodo);
   };
 
   return (
-    <form className={classes.form} onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <label>
-        Todo:
+        My To Do:
         <input type="text" ref={todoInputRef} />
       </label>
-      <button type="submit">Add Todo</button>
-    </form>
+      <button type="submit">Add</button>
+    </Form>
   );
 };
 

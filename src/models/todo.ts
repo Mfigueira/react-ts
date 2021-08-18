@@ -1,4 +1,4 @@
-export class Todo {
+class Todo {
   id: string;
   text: string;
 
@@ -7,3 +7,5 @@ export class Todo {
     this.text = todoText;
   }
 }
+
+export default Todo;

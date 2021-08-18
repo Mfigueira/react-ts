@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Todo } from '../models/todo';
+import Todo from '../models/todo';
 
 type TodosContextObj = {
   todos: Todo[];

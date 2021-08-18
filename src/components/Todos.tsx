@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import TodosContext from '../store/todos-context';
-import { TodoItem } from './TodoItem';
+import TodoItem from './TodoItem';
 import classes from './Todos.module.css';
 
-export const Todos: React.FC = () => {
+const Todos: React.FC = () => {
   const { todos, removeTodo } = useContext(TodosContext);
 
   return (
@@ -18,3 +18,5 @@ export const Todos: React.FC = () => {
     </ul>
   );
 };
+
+export default Todos;

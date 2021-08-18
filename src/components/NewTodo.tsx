@@ -2,7 +2,7 @@ import { useContext, useRef } from 'react';
 import TodosContext from '../store/todos-context';
 import classes from './NewTodo.module.css';
 
-export const NewTodo: React.FC = () => {
+const NewTodo: React.FC = () => {
   const { addTodo } = useContext(TodosContext);
   const todoInputRef = useRef<HTMLInputElement>(null);
 
@@ -24,3 +24,5 @@ export const NewTodo: React.FC = () => {
     </form>
   );
 };
+
+export default NewTodo;

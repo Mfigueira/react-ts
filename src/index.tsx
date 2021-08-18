@@ -1,11 +1,15 @@
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/App/App';
+import { Provider } from 'react-redux';
+import { store } from './store';
 import { TodosContextProvider } from './store/todos-context';
+import App from './components/App/App';
+import './index.css';
 
 ReactDOM.render(
-  <TodosContextProvider>
-    <App />
-  </TodosContextProvider>,
+  <Provider store={store}>
+    <TodosContextProvider>
+      <App />
+    </TodosContextProvider>
+  </Provider>,
   document.getElementById('root')
 );

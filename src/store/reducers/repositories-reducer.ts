@@ -1,5 +1,5 @@
-import ActionType from '../actions';
-import { RepositoriesAction } from '../actions/repositories';
+import { ActionType } from '../action-types';
+import { RepositoriesAction } from '../actions';
 
 interface RepositoriesState {
   loading: boolean;

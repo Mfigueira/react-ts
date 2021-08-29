@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import TodosContext from '../../store/todos-context';
+import TodosContext from '../../store/context/TodosContext';
 import NewTodo from './NewTodo';
 import SearchTodo from './SearchTodo';
 import TodoList from './TodoList';

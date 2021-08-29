@@ -1,5 +1,5 @@
 import { useContext, useRef } from 'react';
-import TodosContext from '../../store/todos-context';
+import TodosContext from '../../store/context/TodosContext';
 import Form from '../UI/Form';
 
 const NewTodo: React.FC = () => {
